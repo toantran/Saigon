@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Tumsun.Saigon.Domain.DomainObject.DOM.DomainObject" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DOM\DomainObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tumsun.Saigon.Domain.DomainObject.DOM.CatalogVehicle">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgCAAAAAAAAIAAAAAAQCEAAAAAAAAAAAA=</HashCode>
+      <FileName>DOM\CatalogVehicle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CatalogOptions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tumsun.Saigon.Domain.DomainObject.DOM.CatalogOption" Collapsed="true">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DOM\CatalogOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

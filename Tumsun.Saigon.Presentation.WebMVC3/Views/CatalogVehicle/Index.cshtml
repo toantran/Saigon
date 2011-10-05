@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Tumsun.Saigon.Domain.DomainObject.DOM.CatalogVehicle>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            ModelId
+        </th>
+        <th>
+            MakeId
+        </th>
+        <th>
+            ModelYear
+        </th>
+        <th>
+            CatalogPrice
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModelId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MakeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModelYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CatalogPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Configure", "Configure", new { id=item.Id }) |
+            @Html.ActionLink("Add To List", "AddToList", new { id=item.Id }) |
+        </td>
+    </tr>
+}
+
+</table>

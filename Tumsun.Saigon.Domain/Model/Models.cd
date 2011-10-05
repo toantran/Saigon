@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Tumsun.Saigon.Domain.Model.CatalogOption" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAgAAAAAAAAAAAAAAAAAAIAAIAAQAAAAAA=</HashCode>
+      <FileName>Model\CatalogOption.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tumsun.Saigon.Domain.Model.CatalogVehicle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAIAAAAAAQCMAAAAAQAAAAAA=</HashCode>
+      <FileName>Model\CatalogVehicle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tumsun.Saigon.Domain.Model.VehicleMake" Collapsed="true">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\VehicleMake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tumsun.Saigon.Domain.Model.VehicleModel" Collapsed="true">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Model\VehicleModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Tumsun.Saigon.Domain.Model.IAggregateRoot">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\IAggregateRoot.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

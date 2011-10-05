@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{376FAB70-DC23-4831-B872-1B7ACAF31C04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{5E4152BF-1440-48C8-989E-EC268CFFB04A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{9B71DDC9-2A7C-4E6B-A209-153910555C35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tumsun.Saigon.Presentation.WebMVC3", "Tumsun.Saigon.Presentation.WebMVC3\Tumsun.Saigon.Presentation.WebMVC3.csproj", "{C0B4D776-B2AB-4F3A-8793-32ADA2C8E025}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tumsun.SaigonData.Memory", "Tumsun.SaigonData.Memory\Tumsun.SaigonData.Memory.csproj", "{DC19122C-E1E8-4C54-957A-D482E3A720E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9AA8E02D-9346-43A7-A9FB-E2C6AC5BE2EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tumsun.Saigon.Domain", "Tumsun.Saigon.Domain\Tumsun.Saigon.Domain.csproj", "{BD9BF940-5CF3-4BAA-86F7-2F9335E6079C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tumsun.Saigon.Domain.Services", "Tumsun.Saigon.Domain.Services\Tumsun.Saigon.Domain.Services.csproj", "{08BAF056-6678-48E7-A1A0-503E152BA129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tumsun.Saigon.Data.OracleEF", "Tumsun.Saigon.Data.OracleEF\Tumsun.Saigon.Data.OracleEF.csproj", "{09101262-F856-4FD6-B162-9AE135592377}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0B4D776-B2AB-4F3A-8793-32ADA2C8E025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B4D776-B2AB-4F3A-8793-32ADA2C8E025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B4D776-B2AB-4F3A-8793-32ADA2C8E025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B4D776-B2AB-4F3A-8793-32ADA2C8E025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC19122C-E1E8-4C54-957A-D482E3A720E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC19122C-E1E8-4C54-957A-D482E3A720E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC19122C-E1E8-4C54-957A-D482E3A720E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC19122C-E1E8-4C54-957A-D482E3A720E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD9BF940-5CF3-4BAA-86F7-2F9335E6079C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD9BF940-5CF3-4BAA-86F7-2F9335E6079C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD9BF940-5CF3-4BAA-86F7-2F9335E6079C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD9BF940-5CF3-4BAA-86F7-2F9335E6079C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BAF056-6678-48E7-A1A0-503E152BA129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BAF056-6678-48E7-A1A0-503E152BA129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BAF056-6678-48E7-A1A0-503E152BA129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BAF056-6678-48E7-A1A0-503E152BA129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09101262-F856-4FD6-B162-9AE135592377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09101262-F856-4FD6-B162-9AE135592377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09101262-F856-4FD6-B162-9AE135592377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09101262-F856-4FD6-B162-9AE135592377}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E4152BF-1440-48C8-989E-EC268CFFB04A} = {9AA8E02D-9346-43A7-A9FB-E2C6AC5BE2EE}
+		{9B71DDC9-2A7C-4E6B-A209-153910555C35} = {9AA8E02D-9346-43A7-A9FB-E2C6AC5BE2EE}
+		{376FAB70-DC23-4831-B872-1B7ACAF31C04} = {9AA8E02D-9346-43A7-A9FB-E2C6AC5BE2EE}
+		{C0B4D776-B2AB-4F3A-8793-32ADA2C8E025} = {5E4152BF-1440-48C8-989E-EC268CFFB04A}
+		{DC19122C-E1E8-4C54-957A-D482E3A720E3} = {9B71DDC9-2A7C-4E6B-A209-153910555C35}
+		{09101262-F856-4FD6-B162-9AE135592377} = {9B71DDC9-2A7C-4E6B-A209-153910555C35}
+		{BD9BF940-5CF3-4BAA-86F7-2F9335E6079C} = {376FAB70-DC23-4831-B872-1B7ACAF31C04}
+		{08BAF056-6678-48E7-A1A0-503E152BA129} = {376FAB70-DC23-4831-B872-1B7ACAF31C04}
+	EndGlobalSection
+EndGlobal
