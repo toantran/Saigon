@@ -41,10 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\CatalogVehicleServiceDTOs.cs" />
-    <Compile Include="DTO\ReponseDTO.cs" />
+    <Compile Include="DTO\ResponseDTO.cs" />
     <Compile Include="DTO\RequestDTO.cs" />
     <Compile Include="DTO\ServiceError.cs" />
     <Compile Include="ICatalogVehicleServices.cs" />
+    <Compile Include="Implementations\CatalogVehicleServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

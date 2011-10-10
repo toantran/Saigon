@@ -9,5 +9,6 @@ namespace Tumsun.Saigon.Data.OracleEF.Repositories
 {
     public class CatalogVehicleRepository: Repository<CatalogVehicle>, ICatalogVehicleRepository
     {
+
     }
 }

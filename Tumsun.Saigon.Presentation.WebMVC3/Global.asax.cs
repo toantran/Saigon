@@ -4,13 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Tumsun.Saigon.Web;
 
 namespace Tumsun.Saigon.Presentation.WebMVC3
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
 
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : BaseHttpApplication
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {

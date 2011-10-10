@@ -1,7 +1,7 @@
-﻿@model IEnumerable<Tumsun.Saigon.Domain.DomainObject.DOM.CatalogVehicle>
+﻿@model Tumsun.Saigon.Presentation.WebMVC3.Models.CatalogVehicle.ListViewModel
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = Model.Title;
 }
 
 <h2>Index</h2>
@@ -12,19 +12,10 @@
 <table>
     <tr>
         <th>
-            ModelId
-        </th>
-        <th>
-            MakeId
-        </th>
-        <th>
-            ModelYear
+            Id
         </th>
         <th>
             CatalogPrice
-        </th>
-        <th>
-            Description
         </th>
         <th>
             Name
@@ -32,25 +23,16 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model.Vehicles) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ModelId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MakeId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ModelYear)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CatalogPrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
+            @Html.DisplayFor(modelItem => item.Id)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
             @Html.ActionLink("Configure", "Configure", new { id=item.Id }) |

@@ -16,11 +16,11 @@ namespace Tumsun.Saigon.Data.OracleEF
     {
         //private static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["SaigonEntities"].ConnectionString;
 
-        //public SaigonContext() 
-        //    : base(ConnectionString)
-        //{
+        public SaigonContext()
+            : base(ConnectionString)
+        {
 
-        //}
+        }
 
         public DbSet<CatalogVehicle> CatalogVehicles { get; set; }
 
@@ -33,8 +33,7 @@ namespace Tumsun.Saigon.Data.OracleEF
                 .HasKey(e => e.Id);
 
             modelBuilder.Entity<CatalogVehicle>()
-                .Property(p => p.Id)
-                .HasColumnName("CatalogVehicleId");
+                .Property(p => p.Id);
 
             modelBuilder.Entity<CatalogVehicle>()
                 .Property(p => p.MakeId)
@@ -43,7 +42,6 @@ namespace Tumsun.Saigon.Data.OracleEF
             modelBuilder.Entity<CatalogVehicle>()
                 .Property(p => p.ModelId)
                 .IsRequired();
-
 
             #endregion
 

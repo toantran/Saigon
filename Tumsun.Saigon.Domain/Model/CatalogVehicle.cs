@@ -8,6 +8,7 @@ namespace Tumsun.Saigon.Domain.Model
     public class CatalogVehicle : IAggregateRoot
     {
         public virtual int Id { get; set; }
+        public virtual string Name { get; set; }
         public virtual int ModelId { get; set; }
         public virtual int MakeId { get; set; }
         public virtual int ModelYear { get; set; }
@@ -19,12 +20,12 @@ namespace Tumsun.Saigon.Domain.Model
 
         bool IAggregateRoot.CanBeSaved
         {
-            get { throw new NotImplementedException(); }
+            get { return true; }
         }
 
         bool IAggregateRoot.CanBeDeleted
         {
-            get { throw new NotImplementedException(); }
+            get { return true; }
         }
     }
 }

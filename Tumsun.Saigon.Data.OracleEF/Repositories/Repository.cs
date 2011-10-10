@@ -4,25 +4,64 @@ using System.Linq;
 using System.Text;
 using Tumsun.Saigon.Domain.Model;
 using Tumsun.Saigon.Domain.Repositories;
+using System.Data.Entity;
 
 namespace Tumsun.Saigon.Data.OracleEF.Repositories
 {
-    public class Repository<T>: IRepository<T> where T: IAggregateRoot
+    public class Repository<T> : IRepository<T> where T : class, IAggregateRoot
     {
+        private SaigonContext _activeContext = null;
+
+
+        public Repository()
+        {
+            _activeContext = new SaigonContext();
+        }
+
+
+        public Repository(SaigonContext activeContext)
+        {
+            _activeContext = activeContext;
+        }
+
+
+        public SaigonContext ActiveContext
+        {
+            get { return _activeContext; }
+            private set { _activeContext = value; }
+        }
+
+
+        private DbSet<T> set = null;
+
+        public DbSet<T> Set
+        {
+            get
+            {
+                if (set == null)
+                {
+                    set = this.ActiveContext.Set<T>();
+                }
+                return set;
+            }
+        }
+
 
         public IQueryable<T> Include(System.Linq.Expressions.Expression<Func<T, object>> subSelector)
         {
-            throw new NotImplementedException();
+            return this.ActiveContext.Set<T>()
+                .Include(subSelector);
         }
 
         public void Update(T item)
         {
-            throw new NotImplementedException();
+            this.ActiveContext.SaveChanges();
         }
 
         public void Add(T item)
         {
-            throw new NotImplementedException();
+            this.Set.Add(item);
+            this.ActiveContext.SaveChanges();
         }
 
         public void Clear()
@@ -32,7 +71,7 @@ namespace Tumsun.Saigon.Data.OracleEF.Repositories
 
         public bool Contains(T item)
         {
-            throw new NotImplementedException();
+            return this.Set.Contains(item);
         }
 
         public void CopyTo(T[] array, int arrayIndex)
@@ -42,42 +81,51 @@ namespace Tumsun.Saigon.Data.OracleEF.Repositories
 
         public int Count
         {
-            get { throw new NotImplementedException(); }
+            get { return this.Set.Count(); }
         }
 
         public bool IsReadOnly
         {
-            get { throw new NotImplementedException(); }
+            get { return false; }
         }
 
         public bool Remove(T item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                this.Set.Remove(item);
+                this.ActiveContext.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return this.Set.AsEnumerable().GetEnumerator();
         }
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
 
         public Type ElementType
         {
-            get { throw new NotImplementedException(); }
+            get { return (this.Set.AsQueryable() as IQueryable).ElementType; }
         }
 
         public System.Linq.Expressions.Expression Expression
         {
-            get { throw new NotImplementedException(); }
+            get { return (this.Set.AsQueryable() as IQueryable).Expression; }
         }
 
         public IQueryProvider Provider
         {
-            get { throw new NotImplementedException(); }
+            get { return (this.Set.AsQueryable() as IQueryable).Provider; }
         }
     }
 }
